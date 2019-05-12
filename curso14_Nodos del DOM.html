@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nodos de DOM</title>
+</head>
+
+<body>
+    <h1 id="titulo">Nodos del DOM</h1>
+    <div id="subtitulo"></div>
+    <p>1.- Lorem, ipsum <b>dolor</b> sit amet consectetur adipisicing elit. Quidem, fugit. Aliquid adipisci animi illum officiis enim debitis incidunt quisquam. Inventore iste natus blanditiis architecto. Nisi aliquid aliquam autem beatae vel?
+    </p>
+    <p id="segundo">
+        2.- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, sapiente enim minus asperiores autem quis vero incidunt consequatur ut odit voluptas maxime! Eius, id. Alias expedita sapiente at aut qui!
+
+    </p>
+    <p>
+        3.- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim pariatur saepe, est, impedit quod ipsam consectetur iusto, accusamus dignissimos iste itaque voluptatum. Et molestiae, quo consectetur aut sed fugiat accusamus?
+    </p>
+
+    <script>
+        //crear elementos e integarlos a partir de javascript
+
+
+        // 1.- crear el elemento
+        var elemento = document.createElement("h2");
+        // 2.- crear un nodo de texto
+        var contenido = document.createTextNode("Este es el titular del nodo");
+        // 3.- Añadir el nodo de texto al elemento
+        elemento.appendChild(contenido);
+        // 4.- Agregar atributos al elemento
+        elemento.setAttribute("align", "center");
+        // 5.- Agregar el elemento al documento
+        document.getElementById("subtitulo").appendChild(elemento);
+    </script>
+
+</body>
+
+</html>

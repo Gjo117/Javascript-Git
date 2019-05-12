@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Metodos de Arreglos</title>
+</head>
+
+<body>
+    <h1>Metodos de Arreglos</h1>
+    <script>
+        var amigos = ["Dani", "Ivan", "Lalo", "Hector", "Jesus"];
+        document.write("Tienes " + amigos.length + " amigos");
+
+        //agregar un nuevo amigo en el arreglo
+        amigos[amigos.length] = "Natan";
+
+        document.write("<br>");
+        document.write("<br>");
+        for (let i = 0; i < amigos.length; i++) {
+            document.write(amigos[i]);
+            document.write("<br>");
+        }
+
+        //otra forma de arreglar al arreglo es push
+        amigos.push("otroIvan", "Wer");
+        document.write("<br>");
+        document.write("<br>");
+        for (let i = 0; i < amigos.length; i++) {
+            document.write(amigos[i]);
+            document.write("<br>");
+        }
+
+        //Eliminar un elementro del arreglo
+        amigos.pop();
+        document.write("<br>");
+        document.write("<br>");
+        for (let i = 0; i < amigos.length; i++) {
+            document.write(amigos[i]);
+            document.write("<br>");
+        }
+
+
+        var amigos2 = ["Dan", "Iva", "Lal", "Hect", "Jes"];
+        var amigos3 = amigos.concat(amigos2);
+        document.write("<br>");
+        document.write("<br>");
+        for (let i = 0; i < amigos3.length; i++) {
+            document.write(amigos3[i]);
+            document.write("<br>");
+        }
+        document.write("<br>");
+        document.write("<br>");
+        //obtiene todo el arreglo y agrega un espaciado;
+        document.write(amigos.join(" : "));
+
+        var ordenar = amigos.sort();
+        document.write("<br>");
+        document.write("<br>");
+        document.write(ordenar);
+
+        var ordenar = amigos.reverse();
+        document.write("<br>");
+        document.write("<br>");
+        document.write(ordenar);
+    </script>
+</body>
+
+</html>

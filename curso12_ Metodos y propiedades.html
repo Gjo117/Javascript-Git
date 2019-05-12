@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Metodos y propiedades para Cadenas de Texto</title>
+</head>
+
+<body>
+    <h1> Metodos y propiedades para Cadenas de Texto</h1>
+
+    <script>
+        var texto = "Carlos Giovanni Gonzalez Martinez";
+        //Para saber cuantos elementos o caracteres hay
+        var ntexto = texto.length;
+        document.write(ntexto + "<br>");
+
+        //para cortar la cadena de texto
+        var ntexto2 = texto.substring(6);
+        document.write(ntexto2 + "<br>");
+
+        //para cortar la cadena de un punto a otro
+        var ntexto3 = texto.substr(0, 15);
+        document.write(ntexto3 + "<br>");
+
+        //nos devuelve la posicion de una letra en especifico
+        var ntexto1 = texto.indexOf("G"); //el segundo para es para enpesar a buscar
+        document.write(ntexto1 + "<br>");
+
+        //busca de atras hacia delante
+        var ntexto4 = texto.lastIndexOf("G"); //el segundo para es para enpesar a buscar
+        document.write(ntexto4 + "<br>");
+
+        //nos permite remplazar una cadena de texto por otra
+        var ntexto5 = texto.replace("Carlos", "FalconMasters");
+        document.write(ntexto5 + "<br>");
+
+        //nos permite cambiar letras a mayusculas
+        var ntexto6 = texto.toUpperCase();
+        document.write(ntexto6 + "<br>");
+
+        //nos permite cambiar letras a minusculas
+        var ntexto7 = texto.toLowerCase();
+        document.write(ntexto7 + "<br>");
+    </script>
+
+</body>
+
+</html>

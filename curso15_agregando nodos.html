@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agregar Nodos de DOM</title>
+</head>
+
+<body>
+    <h1 id="titulo"> Agregar Nodos del DOM</h1>
+
+    <ol id="lista">
+        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam inventore nihil vitae explicabo ipsam optio voluptatem nulla est, cumque labore dolorum recusandae a nesciunt iure facere eveniet harum praesentium debitis.</li>
+        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione soluta maxime rem perspiciatis ullam dignissimos voluptatem molestiae optio obcaecati facere voluptatum a dolorem quidem eveniet, tempora quas repudiandae, fugiat libero.</li>
+    </ol>
+
+    <script>
+        //creo elemento
+        var elemento = document.createElement("li");
+        //cre el contenido
+        var contenido = document.createTextNode("nuevo nodo");
+        //agrega el contenido para el elemento
+        elemento.appendChild(contenido);
+        //agrega el elemento con contenido al documento al final
+        document.body.appendChild(elemento);
+
+        //agrega el elemento en donde indiques a traves del elemento padre
+        //var padre = document.getElementById("lista");
+        //padre.appendChild(elemento);
+
+        //agregar el elemento en el lugar donde quieras de la lista
+        var padre = document.getElementsByTagName("li")[0].parentNode;
+        hijos = document.getElementsByTagName("li")[0];
+        padre.insertBefore(elemento, hijos); //(elemento,antes de este)
+    </script>
+</body>
+
+</html>

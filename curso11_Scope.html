@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scope</title>
+</head>
+
+<body>
+    <h1>Scope</h1>
+    <script>
+        // El scope es lo que determina la accesibilidad de nuestro codigo
+        // Global - desde cualquier parte del codigo 
+        // Local - solo dentro de una funcion o una funcion anidada
+
+        //global
+        (function() { // funcion autoinvocada
+            var globalvar = "Esta variable es global";
+
+            var mfuncion = function() {
+                    //local
+                    //si le quitas la palabra var se convierte en global
+                    //var localvar = "esta variable es local";
+                    localvar = "esta variable es local";
+                    alert(globalvar);
+                    alert(localvar);
+                }
+                //la varable global puede ser usada en cualquier lugar
+            alert(globalvar);
+            //no puedes usar la variable local afuare de su funcion
+            alert(localvar);
+            var mifuncion = function() {
+                var variableLocal = "variable local";
+
+                var FuncionLocal = function() {
+                    //var variableLocal = "variable local anidada";
+                    //de la funcion puede buscar hacia afuera pero no hacia dentro
+                    alert(variableLocal);
+                }
+                FuncionLocal();
+            }
+
+            mifuncion();
+        }())
+    </script>
+</body>
+
+</html>
